@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>One-Time Username and Password</title>
+    <link rel="shortcut icon" href="user logo.png" type="x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <img src="/INFOMGMT/Images/user.png" alt="image" />
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="button" onclick="checkAccount()">Submit</button>
+      </form>
+    </div>
+    <script>
+      const username = "denzel";
+      const password = "123";
+
+      function checkAccount() {
+        const inputUsername = document.getElementById("username").value;
+        const inputPassword = document.getElementById("password").value;
+        if (inputUsername === username && inputPassword === password) {
+          alert("sucessfully Login. You may proceed.");
+        } else {
+          alert("Invalid Username and Password. Please try again.");
+        }
+      }
+    </script>
+  </body>
+</html>
